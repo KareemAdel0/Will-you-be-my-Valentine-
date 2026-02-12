@@ -163,12 +163,12 @@ h1 {
   .photo-left {
     width: 220px;
     right: 8px;
-    bottom: 90px;
+    bottom: 100px;
   }
 
   .photo-calendar {
-    width: 2250px;
-    bottom: 46px;
+    width: 250px;
+    bottom: 50px;
     left: 10px;
   }
 
