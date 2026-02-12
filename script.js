@@ -32,6 +32,19 @@ function moveNoButtonRandom(noButton) {
     noButton.style.top = `${top}px`;
 }
 
+function enableNoButtonEvasiveMode(noButton) {
+    if (noButton.dataset.evasiveReady === "1") {
+        return;
+    }
+
+    const escape = () => moveNoButtonRandom(noButton);
+
+    // As soon as cursor reaches the button, it jumps away.
+    noButton.addEventListener("mouseenter", escape);
+    noButton.addEventListener("pointerenter", escape);
+    noButton.dataset.evasiveReady = "1";
+}
+
 function handleNoClick() {
     const noButton = document.querySelector(".no-button");
     const yesButton = document.querySelector(".yes-button");
@@ -58,6 +71,7 @@ function handleNoClick() {
         if (!noButtonFloating) {
             noButton.classList.add("floating");
             noButtonFloating = true;
+            enableNoButtonEvasiveMode(noButton);
         }
         moveNoButtonRandom(noButton);
     }
