@@ -23,21 +23,11 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 24px;
-  background: var(--bg);
+  background: linear-gradient(160deg, #f8cadf 0%, #f3bfd6 100%);
   font-family: "Baloo 2", "Trebuchet MS", sans-serif;
   color: var(--text-color);
   position: relative;
   overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 14px;
-  border: 2px solid rgba(255, 255, 255, 0.65);
-  border-radius: 24px;
-  pointer-events: none;
-  z-index: 0;
 }
 
 .container {
@@ -61,56 +51,22 @@ body::before {
 }
 
 .photo-left {
-  left: 30px;
-  bottom: 72px;
-  width: 180px;
+  left: 26px;
+  bottom: 64px;
+  width: 210px;
 }
 
 .photo-calendar {
-  right: 44px;
-  top: 26px;
-  width: 205px;
+  right: 26px;
+  top: 18px;
+  width: 240px;
   transform: rotate(6deg);
 }
 
 .photo-right {
-  right: 34px;
-  bottom: 118px;
-  width: 150px;
-}
-
-.page-loop {
-  position: fixed;
-  border: 8px solid;
-  border-radius: 46% 54% 57% 43% / 44% 52% 48% 56%;
-  background: transparent;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-.loop-top-right {
-  right: 28px;
-  top: 34px;
-  width: 250px;
-  height: 132px;
-  border-color: rgba(255, 255, 255, 0.9);
-}
-
-.loop-bottom-left {
-  left: 22px;
-  bottom: 18px;
-  width: 300px;
-  height: 208px;
-  border-color: #f19424;
-}
-
-.loop-bottom-right {
-  right: 46px;
-  bottom: 26px;
-  width: 312px;
-  height: 198px;
-  border-color: #38b7e8;
+  right: 20px;
+  bottom: 94px;
+  width: 190px;
 }
 
 .top-sticker {
@@ -205,39 +161,21 @@ h1 {
   }
 
   .photo-left {
-    width: 130px;
+    width: 138px;
     bottom: 46px;
     left: 10px;
   }
 
   .photo-calendar {
-    width: 150px;
+    width: 168px;
     right: 2px;
     top: 26px;
   }
 
   .photo-right {
-    width: 102px;
+    width: 122px;
     right: 8px;
     bottom: 90px;
-  }
-
-  .loop-top-right {
-    width: 176px;
-    height: 96px;
-    right: 8px;
-  }
-
-  .loop-bottom-left {
-    width: 198px;
-    height: 142px;
-    left: -16px;
-  }
-
-  .loop-bottom-right {
-    width: 210px;
-    height: 130px;
-    right: 2px;
   }
 }
 
