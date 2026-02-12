@@ -1,17 +1,70 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knew you would say yes!</title>
-    <link rel="stylesheet" href="./yes_style.css">
+    <title>Good choice babu</title>
+    <link rel="stylesheet" href="yes_style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="header_text">Knew you would say yes!</h1>
-        <div class="gif_container">
-            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
-        </div>
-    </div>
+    <main class="page">
+        <section class="hero card">
+            <p class="eyebrow">Good choice babu</p>
+            <h1>Too late to go back now</h1>
+            <p>You are officially in my Valentine universe.</p>
+        </section>
+
+        <section class="card note-card">
+            <div class="card-head">
+                <h2>Secret note for you</h2>
+                <button id="toggle-note" class="small-btn" type="button">Open note</button>
+            </div>
+            <div id="secret-note" class="secret-note" hidden>
+                <p>
+                    You make ordinary days feel special. Thank you for your laugh,
+                    your patience, and the way you stay by my side.
+                </p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Our favourite memories</h2>
+            <p class="help-text">Replace these image links with your own 6 photos.</p>
+            <div class="memory-grid">
+                <figure class="memory-item">
+                    <img src="https://placehold.co/600x600/ffd9e6/7f3f57?text=Memory+1" alt="Favourite memory 1">
+                </figure>
+                <figure class="memory-item">
+                    <img src="https://placehold.co/600x600/ffe7d6/7f3f57?text=Memory+2" alt="Favourite memory 2">
+                </figure>
+                <figure class="memory-item">
+                    <img src="https://placehold.co/600x600/fcdaf1/7f3f57?text=Memory+3" alt="Favourite memory 3">
+                </figure>
+                <figure class="memory-item">
+                    <img src="https://placehold.co/600x600/ffe1ee/7f3f57?text=Memory+4" alt="Favourite memory 4">
+                </figure>
+                <figure class="memory-item">
+                    <img src="https://placehold.co/600x600/ffe3dd/7f3f57?text=Memory+5" alt="Favourite memory 5">
+                </figure>
+                <figure class="memory-item">
+                    <img src="https://placehold.co/600x600/ffe8f4/7f3f57?text=Memory+6" alt="Favourite memory 6">
+                </figure>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Things I loved about you</h2>
+            <ul class="love-list">
+                <li>Your smile when you are trying not to laugh.</li>
+                <li>The way you care deeply about little things.</li>
+                <li>Your voice when you say my name.</li>
+                <li>How you make me feel calm and safe.</li>
+                <li>Your random cute jokes that always work.</li>
+                <li>The way you make every plan feel exciting.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="yes_script.js"></script>
 </body>
 </html>
