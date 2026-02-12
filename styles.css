@@ -52,13 +52,13 @@ body {
 
 .photo-left {
   right: 17px;
-  bottom: 110px;
+  bottom: 100px;
   width: 350px;
 }
 
 .photo-calendar {
   left: 26px;
-  bottom: 75px;
+  bottom: 60px;
   width: 380px;
   transform: rotate(6deg);
 }
@@ -163,12 +163,12 @@ h1 {
   .photo-left {
     width: 220px;
     right: 8px;
-    bottom: 100px;
+    bottom: 90px;
   }
 
   .photo-calendar {
     width: 250px;
-    bottom: 50px;
+    bottom: 40px;
     left: 10px;
   }
 
