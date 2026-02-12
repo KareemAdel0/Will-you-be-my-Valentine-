@@ -125,6 +125,12 @@ h1 {
   background-color: var(--no-bg-hover);
 }
 
+.no-button.floating {
+  position: fixed;
+  z-index: 10;
+  transition: left 220ms ease, top 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+
 .no-button.shake {
   animation: shake 280ms;
 }
@@ -144,6 +150,10 @@ h1 {
   .yes-button,
   .no-button {
     width: 100%;
+  }
+
+  .no-button.floating {
+    width: auto;
   }
 }
 
