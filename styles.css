@@ -35,11 +35,11 @@ body {
   z-index: 2;
   width: min(90vw, 700px);
   margin: 120px auto 70px;
-  background: var(--card-bg);
+  background: transparent;
   border-radius: 22px;
   text-align: center;
   padding: 30px 22px 34px;
-  box-shadow: 0 20px 45px rgba(128, 26, 59, 0.18);
+  box-shadow: none;
 }
 
 .border-photo {
@@ -52,13 +52,13 @@ body {
 
 .photo-left {
   right: 17px;
-  bottom: 90px;
+  bottom: 20px;
   width: 390px;
 }
 
 .photo-calendar {
   left: 26px;
-  bottom: 50px;
+  bottom: 10px;
   width: 420px;
   transform: rotate(6deg);
 }
