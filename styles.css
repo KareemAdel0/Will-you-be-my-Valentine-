@@ -51,22 +51,22 @@ body {
 }
 
 .photo-left {
-  right: 20px;
-  bottom: 94px;
+  right: 17px;
+  bottom: 100px;
   width: 350px;
 }
 
 .photo-calendar {
   left: 26px;
-  bottom: 64px;
-  width: 360px;
+  bottom: 70px;
+  width: 380px;
   transform: rotate(6deg);
 }
 
 .photo-right {
-  right: 26px;
+  right: 22px;
   top: 18px;
-  width: 300px;
+  width: 350px;
 }
 
 .top-sticker {
