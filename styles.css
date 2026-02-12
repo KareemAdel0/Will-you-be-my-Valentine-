@@ -53,20 +53,20 @@ body {
 .photo-left {
   left: 26px;
   bottom: 64px;
-  width: 210px;
+  width: 280px;
 }
 
 .photo-calendar {
   right: 26px;
   top: 18px;
-  width: 240px;
+  width: 320px;
   transform: rotate(6deg);
 }
 
 .photo-right {
   right: 20px;
   bottom: 94px;
-  width: 190px;
+  width: 250px;
 }
 
 .top-sticker {
@@ -161,19 +161,19 @@ h1 {
   }
 
   .photo-left {
-    width: 138px;
+    width: 190px;
     bottom: 46px;
     left: 10px;
   }
 
   .photo-calendar {
-    width: 168px;
+    width: 220px;
     right: 2px;
     top: 26px;
   }
 
   .photo-right {
-    width: 122px;
+    width: 165px;
     right: 8px;
     bottom: 90px;
   }
