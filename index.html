@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="decor decor-left" aria-hidden="true"></div>
-    <div class="decor decor-right" aria-hidden="true"></div>
+    <div class="floating-heart left-heart" aria-hidden="true">❤</div>
+    <div class="floating-heart right-heart" aria-hidden="true">❤</div>
+
     <main class="container">
-        <p class="kicker">Valentine Mode</p>
+        <div class="calendar-badge" aria-hidden="true">
+            <span class="ring ring-left"></span>
+            <span class="ring ring-right"></span>
+            <p>14</p>
+            <p>FEB</p>
+        </div>
+
+        <p class="top-sticker" aria-hidden="true">🐰💘🐰</p>
+        <h2 class="kicker">Hey there,</h2>
         <h1>Will you be my Valentine?</h1>
-        <p class="subtitle">You can keep pressing "No" but this page only believes in "Yes".</p>
+
         <div class="buttons">
-            <button class="yes-button" onclick="handleYesClick()">Yes</button>
-            <button class="no-button" onclick="handleNoClick()">No</button>
+            <button class="yes-button" onclick="handleYesClick()">YES OF COURSE</button>
+            <button class="no-button" onclick="handleNoClick()">NO THANK YOU</button>
         </div>
+
         <div class="gif_container">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute valentine sticker">
         </div>
+
+        <div class="dashed-heart" aria-hidden="true"></div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
