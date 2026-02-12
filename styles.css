@@ -51,22 +51,22 @@ body {
 }
 
 .photo-left {
-  left: 26px;
-  bottom: 64px;
-  width: 280px;
+  right: 20px;
+  bottom: 94px;
+  width: 350px;
 }
 
 .photo-calendar {
-  right: 26px;
-  top: 18px;
-  width: 320px;
+  left: 26px;
+  bottom: 64px;
+  width: 360px;
   transform: rotate(6deg);
 }
 
 .photo-right {
-  right: 20px;
-  bottom: 94px;
-  width: 250px;
+  right: 26px;
+  top: 18px;
+  width: 300px;
 }
 
 .top-sticker {
@@ -161,21 +161,21 @@ h1 {
   }
 
   .photo-left {
-    width: 190px;
+    width: 220px;
+    right: 8px;
+    bottom: 90px;
+  }
+
+  .photo-calendar {
+    width: 2250px;
     bottom: 46px;
     left: 10px;
   }
 
-  .photo-calendar {
-    width: 220px;
+  .photo-right {
+    width: 200px;
     right: 2px;
     top: 26px;
-  }
-
-  .photo-right {
-    width: 165px;
-    right: 8px;
-    bottom: 90px;
   }
 }
 
