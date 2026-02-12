@@ -11,17 +11,31 @@
 
 let messageIndex = 0;
 let yesScale = 1;
+let yesBaseFontSize = null;
+let yesBasePadY = null;
+let yesBasePadX = null;
 
 function handleNoClick() {
     const noButton = document.querySelector(".no-button");
     const yesButton = document.querySelector(".yes-button");
 
+    if (!noButton || !yesButton) {
+        return;
+    }
+
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
 
-    yesScale = Math.min(yesScale + 0.2, 2.8);
-    yesButton.style.transform = `scale(${yesScale})`;
-    yesButton.style.transformOrigin = "center";
+    if (yesBaseFontSize === null) {
+        const style = window.getComputedStyle(yesButton);
+        yesBaseFontSize = parseFloat(style.fontSize);
+        yesBasePadY = parseFloat(style.paddingTop);
+        yesBasePadX = parseFloat(style.paddingLeft);
+    }
+
+    yesScale = Math.min(yesScale + 0.12, 2.1);
+    yesButton.style.fontSize = `${yesBaseFontSize * yesScale}px`;
+    yesButton.style.padding = `${yesBasePadY * yesScale}px ${yesBasePadX * yesScale}px`;
 
     noButton.classList.remove("shake");
     void noButton.offsetWidth;
