@@ -1,51 +1,57 @@
+:root {
+  --page-bg: #f9e3e3;
+  --title-color: #d32f2f;
+  --yes-color: #4caf50;
+  --no-color: #f44336;
+  --button-radius: 12px;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f9e3e3;
-    font-family: 'Arial', sans-serif;
-    flex-direction: column;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    color: #d32f2f;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  .yes-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .no-button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .gif_container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--page-bg);
+  font-family: 'Arial', sans-serif;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--title-color);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.yes-button,
+.no-button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  color: white;
+}
+
+.yes-button {
+  margin-right: 10px;
+  background-color: var(--yes-color);
+}
+
+.no-button {
+  background-color: var(--no-color);
+}
+
+.gif_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
