@@ -42,6 +42,106 @@ body {
   box-shadow: 0 20px 45px rgba(128, 26, 59, 0.18);
 }
 
+.corner-paper {
+  position: absolute;
+  left: -10px;
+  bottom: 56px;
+  width: 78px;
+  height: 52px;
+  border: 3px solid #d86e8f;
+  border-right: 0;
+  border-bottom: 0;
+  transform: skewX(-24deg) rotate(-10deg);
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.border-doodle {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  width: 132px;
+  height: 62px;
+}
+
+.doodle-line {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 84px;
+  border-top: 3px dashed #9f7f8a;
+  transform: rotate(18deg);
+}
+
+.doodle-heart {
+  position: absolute;
+  left: 74px;
+  bottom: 0;
+  width: 34px;
+  height: 34px;
+  border: 3px dashed #9f7f8a;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(-45deg);
+  border-radius: 10px;
+}
+
+.doodle-heart::before,
+.doodle-heart::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px dashed #9f7f8a;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.doodle-heart::before {
+  top: -12px;
+  left: -1px;
+}
+
+.doodle-heart::after {
+  left: 14px;
+  top: 1px;
+}
+
+.choco-sticker {
+  position: absolute;
+  right: -22px;
+  bottom: 44px;
+  width: 92px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+}
+
+.sticker-heart {
+  width: 48px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #de355f;
+  filter: drop-shadow(0 4px 5px rgba(111, 42, 58, 0.26));
+  transform: rotate(-8deg);
+}
+
+.choco-dot {
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  border-radius: 8px;
+  background: #8f4f2f;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.16);
+}
+
+.dot-1 { right: 0; bottom: 10px; }
+.dot-2 { right: 8px; bottom: 22px; }
+.dot-3 { right: 18px; bottom: 8px; }
+.dot-4 { right: 14px; bottom: 33px; }
+
 .calendar-badge {
   position: absolute;
   top: -14px;
@@ -212,6 +312,24 @@ h1 {
   .calendar-badge {
     transform: rotate(6deg) scale(0.9);
     right: -2px;
+  }
+
+  .choco-sticker {
+    right: -8px;
+    bottom: 34px;
+    transform: scale(0.88);
+  }
+
+  .corner-paper {
+    left: -2px;
+    bottom: 54px;
+    transform: skewX(-24deg) rotate(-10deg) scale(0.92);
+  }
+
+  .border-doodle {
+    left: 12px;
+    transform: scale(0.9);
+    transform-origin: left bottom;
   }
 }
 
