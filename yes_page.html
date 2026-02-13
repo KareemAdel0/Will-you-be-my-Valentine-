@@ -16,16 +16,14 @@
 
         <section class="card note-card">
             <h2>A Secret Note For You</h2>
-            <p class="note-hint">Click the envelope to open it.</p>
-            <div id="envelope" class="envelope" role="button" tabindex="0" aria-expanded="false" aria-label="Open secret note">
-                <div class="envelope-paper">
-                    <p>
-                        You make ordinary days feel special. Thank you for your laugh,
-                        your patience, and the way you stay by my side.
-                    </p>
-                </div>
-                <div class="envelope-front"></div>
-                <div class="envelope-flap"></div>
+            <p class="note-hint">Hover first, then click the envelope to open the note step by step.</p>
+
+            <div id="envelope" class="envelope stage-0" role="button" tabindex="0" aria-expanded="false" aria-label="Open secret note" aria-live="polite">
+                <img class="envelope-state img-1" src="assets/images/1.png" alt="Closed envelope">
+                <img class="envelope-state img-2" src="assets/images/2.png" alt="Envelope slightly opening">
+                <img class="envelope-state img-3" src="assets/images/3.png" alt="Opened envelope">
+                <img class="envelope-state img-4" src="assets/images/4.png" alt="Envelope with note partly visible">
+                <img class="envelope-state img-5" src="assets/images/5.png" alt="Envelope with full secret note visible">
             </div>
         </section>
 

@@ -74,29 +74,6 @@ h2 {
     font-size: 1.1rem;
 }
 
-.card-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.small-btn {
-    border: 0;
-    background: var(--btn-bg);
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px 16px;
-    border-radius: var(--radius-btn);
-    cursor: pointer;
-    transition: background-color 180ms ease;
-}
-
-.small-btn:hover {
-    background: var(--btn-bg-hover);
-}
-
 .note-card {
     text-align: center;
 }
@@ -109,90 +86,55 @@ h2 {
 }
 
 .envelope {
-    width: min(330px, 84vw);
-    height: 210px;
+    width: min(420px, 88vw);
+    aspect-ratio: 1 / 1;
     margin: 0 auto 6px;
     position: relative;
     cursor: pointer;
     outline: none;
+    user-select: none;
 }
 
-.envelope-front {
+.envelope-state {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 132px;
-    background: #ff5f95;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(181, 36, 88, 0.24);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 220ms ease;
+    pointer-events: none;
 }
 
-.envelope-front::before,
-.envelope-front::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    border-top: 66px solid #ff86b1;
-    border-bottom: 66px solid transparent;
+.envelope.stage-0 .img-1 {
+    opacity: 1;
 }
 
-.envelope-front::before {
-    left: 0;
-    border-left: 165px solid #ff79a8;
+.envelope.stage-0:hover .img-1,
+.envelope.stage-0:focus-visible .img-1 {
+    opacity: 0;
 }
 
-.envelope-front::after {
-    right: 0;
-    border-right: 165px solid #ff79a8;
+.envelope.stage-0:hover .img-2,
+.envelope.stage-0:focus-visible .img-2 {
+    opacity: 1;
 }
 
-.envelope-flap {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 132px;
-    height: 74px;
-    background: #ff9abf;
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
-    transform-origin: bottom;
-    transition: transform 420ms ease;
-    box-shadow: 0 4px 6px rgba(181, 36, 88, 0.15);
-    z-index: 3;
+.envelope.stage-1 .img-3 {
+    opacity: 1;
 }
 
-.envelope-paper {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 26px;
-    height: 150px;
-    background: #fffdfd;
-    border-radius: 8px;
-    border: 1px solid #ffd3e4;
-    padding: 16px 14px;
-    line-height: 1.5;
-    color: #7a3f5a;
-    transform: translateY(72px);
-    transition: transform 420ms ease;
-    z-index: 1;
+.envelope.stage-2 .img-4 {
+    opacity: 1;
 }
 
-.envelope-paper p {
-    margin: 0;
+.envelope.stage-3 .img-5 {
+    opacity: 1;
 }
 
-.envelope.open .envelope-flap {
-    transform: rotateX(180deg);
-}
-
-.envelope.open .envelope-paper {
-    transform: translateY(-16px);
-}
-
-.envelope:focus-visible .envelope-front {
-    box-shadow: 0 0 0 3px rgba(255, 93, 143, 0.35), 0 10px 20px rgba(181, 36, 88, 0.24);
+.envelope:focus-visible {
+    border-radius: 14px;
+    box-shadow: 0 0 0 3px rgba(255, 93, 143, 0.35);
 }
 
 .help-text {
@@ -239,31 +181,5 @@ h2 {
 @media (max-width: 430px) {
     .card {
         padding: 18px;
-    }
-
-    .envelope {
-        height: 194px;
-    }
-
-    .envelope-front {
-        height: 120px;
-    }
-
-    .envelope-front::before,
-    .envelope-front::after {
-        border-top-width: 60px;
-        border-bottom-width: 60px;
-    }
-
-    .envelope-front::before {
-        border-left-width: 145px;
-    }
-
-    .envelope-front::after {
-        border-right-width: 145px;
-    }
-
-    .envelope-flap {
-        bottom: 120px;
     }
 }
