@@ -1,0 +1,169 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap");
+
+:root {
+    /* Matched with the first page palette */
+    --bg-top: #f8cadf;
+    --bg-bottom: #f3bfd6;
+    --card-bg: #ffcfe2;
+    --main-text: #a6294f;
+    --title: #bf214d;
+    --accent: #cf4a6d;
+    --accent-soft: #ffd9e8;
+    --btn-bg: #f7a7bc;
+    --btn-bg-hover: #f499b1;
+    --radius-card: 20px;
+    --radius-btn: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Baloo 2", "Trebuchet MS", sans-serif;
+    background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+    color: var(--main-text);
+}
+
+.page {
+    width: min(1000px, 92vw);
+    margin: 28px auto 40px;
+    display: grid;
+    gap: 18px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    padding: 22px;
+    box-shadow: 0 14px 30px rgba(124, 39, 74, 0.12);
+}
+
+.hero {
+    text-align: center;
+    padding: 28px 22px;
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    margin-top: 6px;
+    margin-bottom: 10px;
+    color: var(--title);
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.1rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+}
+
+.hero p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.note-card {
+    text-align: center;
+}
+
+.note-hint {
+    margin-top: -2px;
+    margin-bottom: 14px;
+    color: #8f3f60;
+    font-size: 1rem;
+}
+
+.envelope {
+    width: min(420px, 88vw);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 6px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.envelope-state {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+    transition: opacity 540ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 540ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    pointer-events: none;
+    will-change: opacity, transform;
+}
+
+.envelope.stage-0 .img-1,
+.envelope.stage-1 .img-2,
+.envelope.stage-2 .img-3,
+.envelope.stage-3 .img-4 {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.envelope:focus-visible {
+    border-radius: 14px;
+    box-shadow: 0 0 0 3px rgba(207, 74, 109, 0.35);
+}
+
+.help-text {
+    margin-top: -4px;
+    margin-bottom: 14px;
+    color: #8f3f60;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.memory-item {
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--accent-soft);
+    aspect-ratio: 1;
+}
+
+.memory-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.love-list {
+    margin: 0;
+    padding-left: 20px;
+    display: grid;
+    gap: 8px;
+    font-size: 1.08rem;
+}
+
+@media (max-width: 700px) {
+    .memory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 430px) {
+    .card {
+        padding: 18px;
+    }
+}
