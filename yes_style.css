@@ -1,16 +1,16 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap");
 
 :root {
-    /* Theme controls: edit these to recolor all sections */
-    --bg-top: #fff6fb;
-    --bg-bottom: #ffe3ee;
-    --card-bg: #ffffff;
-    --main-text: #6f3851;
-    --title: #cb2e66;
-    --accent: #ff5d8f;
-    --accent-soft: #ffe5ef;
-    --btn-bg: #ff6a98;
-    --btn-bg-hover: #ea4e80;
+    /* Matched with the first page palette */
+    --bg-top: #f8cadf;
+    --bg-bottom: #f3bfd6;
+    --card-bg: #ffcfe2;
+    --main-text: #a6294f;
+    --title: #bf214d;
+    --accent: #cf4a6d;
+    --accent-soft: #ffd9e8;
+    --btn-bg: #f7a7bc;
+    --btn-bg-hover: #f499b1;
     --radius-card: 20px;
     --radius-btn: 12px;
 }
@@ -22,7 +22,7 @@
 body {
     margin: 0;
     font-family: "Baloo 2", "Trebuchet MS", sans-serif;
-    background: linear-gradient(155deg, var(--bg-top), var(--bg-bottom));
+    background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
     color: var(--main-text);
 }
 
@@ -81,7 +81,7 @@ h2 {
 .note-hint {
     margin-top: -2px;
     margin-bottom: 14px;
-    color: #99647b;
+    color: #8f3f60;
     font-size: 1rem;
 }
 
@@ -134,13 +134,13 @@ h2 {
 
 .envelope:focus-visible {
     border-radius: 14px;
-    box-shadow: 0 0 0 3px rgba(255, 93, 143, 0.35);
+    box-shadow: 0 0 0 3px rgba(207, 74, 109, 0.35);
 }
 
 .help-text {
     margin-top: -4px;
     margin-bottom: 14px;
-    color: #99647b;
+    color: #8f3f60;
 }
 
 .memory-grid {
@@ -153,7 +153,7 @@ h2 {
     margin: 0;
     border-radius: 14px;
     overflow: hidden;
-    background: #fbe8ef;
+    background: var(--accent-soft);
     aspect-ratio: 1;
 }
 
