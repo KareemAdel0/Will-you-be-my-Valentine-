@@ -1,17 +1,18 @@
-﻿const toggleBtn = document.getElementById("toggle-note");
-const secretNote = document.getElementById("secret-note");
+﻿const envelope = document.getElementById("envelope");
 
-if (toggleBtn && secretNote) {
-    toggleBtn.addEventListener("click", () => {
-        const isHidden = secretNote.hasAttribute("hidden");
+if (envelope) {
+    const toggleEnvelope = () => {
+        envelope.classList.toggle("open");
+        const isOpen = envelope.classList.contains("open");
+        envelope.setAttribute("aria-expanded", String(isOpen));
+    };
 
-        if (isHidden) {
-            secretNote.removeAttribute("hidden");
-            toggleBtn.textContent = "Hide note";
-            return;
+    envelope.addEventListener("click", toggleEnvelope);
+
+    envelope.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleEnvelope();
         }
-
-        secretNote.setAttribute("hidden", "");
-        toggleBtn.textContent = "Open note";
     });
 }

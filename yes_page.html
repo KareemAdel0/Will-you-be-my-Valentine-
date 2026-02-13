@@ -15,15 +15,17 @@
         </section>
 
         <section class="card note-card">
-            <div class="card-head">
-                <h2>Secret note for you</h2>
-                <button id="toggle-note" class="small-btn" type="button">Open note</button>
-            </div>
-            <div id="secret-note" class="secret-note" hidden>
-                <p>
-                    You make ordinary days feel special. Thank you for your laugh,
-                    your patience, and the way you stay by my side.
-                </p>
+            <h2>A Secret Note For You</h2>
+            <p class="note-hint">Click the envelope to open it.</p>
+            <div id="envelope" class="envelope" role="button" tabindex="0" aria-expanded="false" aria-label="Open secret note">
+                <div class="envelope-paper">
+                    <p>
+                        You make ordinary days feel special. Thank you for your laugh,
+                        your patience, and the way you stay by my side.
+                    </p>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
             </div>
         </section>
 
