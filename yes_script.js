@@ -48,3 +48,30 @@ if (envelope) {
     // البداية دائماً من حالة الصفر (الظرف المقفول)
     renderStage();
 }
+
+// ضف الكود ده في آخر ملف yes_script.js
+
+const memories = document.querySelectorAll('.memory-item');
+
+memories.forEach(item => {
+    item.addEventListener('click', () => {
+        // لو عايز الصورة تكبر في نص الشاشة لما تضغط عليها
+        if (item.classList.contains('active-memory')) {
+            item.classList.remove('active-memory');
+            item.style.transform = "scale(1)";
+            item.style.zIndex = "1";
+        } else {
+            // ريست لأي صورة تانية مفتوحة
+            memories.forEach(m => {
+                m.classList.remove('active-memory');
+                m.style.transform = "scale(1)";
+                m.style.zIndex = "1";
+            });
+            
+            // تكبير الصورة اللي اتضغط عليها
+            item.classList.add('active-memory');
+            item.style.transform = "scale(1.1)"; // تكبير بنسبة 10% عشان تبان
+            item.style.zIndex = "10";
+        }
+    });
+});
