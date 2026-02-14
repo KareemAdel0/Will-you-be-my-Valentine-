@@ -185,3 +185,43 @@ h2 {
         padding: 18px;
     }
 }
+
+
+/* ضف الكود ده في آخر ملف الـ CSS */
+
+.letter-text {
+    position: absolute;
+    /* ضبط مكان النص ليكون فوق الورقة البيضاء بالضبط */
+    top: 22%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%; /* عشان الكلام ميبقاش لازق في حواف الورقة */
+    text-align: center;
+    color: #a6294f;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    pointer-events: none;
+    z-index: 5;
+    font-weight: 600;
+}
+
+/* النص يظهر فقط في المرحلة الأخيرة وبحركة smooth */
+.envelope.stage-3 .letter-text {
+    opacity: 1;
+    top: 18%; /* رفعة بسيطة للنص مع حركة الورقة */
+    transition-delay: 0.5s; /* يتأخر شوية لحد ما الورقة تطلع بالكامل */
+}
+
+.signature {
+    margin-top: 15px;
+    font-family: 'Dancing Script', cursive, serif; /* لو حابب تستخدم خط مائل */
+    font-size: 1.3rem;
+    color: #bf214d;
+}
+
+/* تعديل بسيط لضمان أن الصورة الرابعة لا تغطي النص */
+.img-4 {
+    z-index: 2;
+}
