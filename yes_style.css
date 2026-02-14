@@ -169,16 +169,28 @@ h2 {
     transform: scale(1.02);
 }
 
-/* غطاء الهدية */
+/* تعديل حجم الإيموجي داخل الغطاء */
+.gift-emoji {
+    font-size: 4rem; /* كبرت حجمه عشان يبقى واضح جوه المربع */
+    user-select: none;
+    display: block;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
 .memory-overlay {
     position: absolute;
     inset: 0;
-    background-color: #fce4ec;
+    background-color: #ffcfe2; /* نفس لون الـ Card عشان يبان متناسق */
     z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: opacity 0.6s ease, transform 0.6s ease;
+}
+/* حركة بسيطة للإيموجي عشان يشد العين */
+.memory-item:hover .gift-emoji {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
 }
 
 .memory-overlay img {
