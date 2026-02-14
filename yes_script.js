@@ -75,3 +75,9 @@ memories.forEach(item => {
         }
     });
 });
+
+function revealMemory(element) {
+    if (!element.classList.contains('revealed')) {
+        element.classList.add('revealed');
+    }
+}

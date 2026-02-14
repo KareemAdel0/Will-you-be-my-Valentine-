@@ -147,57 +147,71 @@ h2 {
 
 .memory-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .memory-item {
-    margin: 0;
-    border-radius: 14px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.3); /* خلفية خفيفة عشان لو الصورة مش مالية المربع */
+    position: relative;
     aspect-ratio: 1;
+    background: var(--accent-soft);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.memory-item img {
+.memory-item:hover {
+    transform: scale(1.02);
+}
+
+/* غطاء الهدية */
+.memory-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #fce4ec;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.memory-overlay img {
+    width: 60px;
+    height: 60px;
+}
+
+/* الصورة الحقيقية */
+.actual-photo {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* ده اللي هيخلي الصورة تظهر كاملة بدون قص */
-    display: block;
-    transition: transform 0.4s ease;
+    object-fit: contain; /* تظهر الصورة كاملة بدون قص */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: 1;
 }
 
-/* حركة بسيطة لما تضغط (Click) أو تقف بالماوس */
-.memory-item:active img {
-    transform: scale(0.9); /* تصغير بسيط وقت الضغطة بيدي إحساس طبيعي */
+/* الحالة عند الكشف عن الصورة */
+.memory-item.revealed .memory-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%); /* حركة إزاحة للأعلى */
 }
 
-.memory-item.expanded {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    height: 90vh;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 0;
+.memory-item.revealed .actual-photo {
+    opacity: 1;
+    transform: scale(1);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .memory-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 430px) {
-    .card {
-        padding: 18px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

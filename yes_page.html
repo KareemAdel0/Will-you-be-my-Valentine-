@@ -35,28 +35,52 @@
 
         <section class="card">
             <h2>Our favourite memories</h2>
-            <p class="help-text">Replace these image links with your own 6 photos.</p>
+            <p class="help-text">Click on each gift to reveal a memory!</p>
             <div class="memory-grid">
-                <figure class="memory-item">
-                    <img src="assets/images/m1.jpeg" alt="Our first date">
-                </figure>
-                <figure class="memory-item">
-                    <img src="assets/images/m2.jpeg" alt="Beautiful sunset together">
-                </figure>
-                <figure class="memory-item">
-                    <img src="assets/images/m3.jpeg" alt="Funny face selfie">
-                </figure>
-                <figure class="memory-item">
-                    <img src="assets/images/m4.jpeg" alt="That special dinner">
-                </figure>
-                <figure class="memory-item">
-                    <img src="assets/images/m5.jpeg" alt="Our road trip">
-                </figure>
-                <figure class="memory-item">
-                    <img src="assets/images/m6.jpeg" alt="A quiet moment">
-                </figure>
+                <div class="memory-item" onclick="revealMemory(this)">
+                    <div class="memory-overlay">
+                        <img src="https://img.icons8.com/emoji/96/gift-wrapped.png" alt="Gift icon">
+                    </div>
+                    <img class="actual-photo" src="assets/images/m1.jpg" alt="Memory 1">
+                </div>
+                
+                <div class="memory-item" onclick="revealMemory(this)">
+                    <div class="memory-overlay">
+                        <img src="https://img.icons8.com/emoji/96/gift-wrapped.png" alt="Gift icon">
+                    </div>
+                    <img class="actual-photo" src="assets/images/m2.jpeg" alt="Memory 2">
+                </div>
+                
+                <div class="memory-item" onclick="revealMemory(this)">
+                    <div class="memory-overlay">
+                        <img src="https://img.icons8.com/emoji/96/gift-wrapped.png" alt="Gift icon">
+                    </div>
+                    <img class="actual-photo" src="assets/images/m3.jpeg" alt="Memory 3">
+                </div>
+
+                <div class="memory-item" onclick="revealMemory(this)">
+                    <div class="memory-overlay">
+                        <img src="https://img.icons8.com/emoji/96/gift-wrapped.png" alt="Gift icon">
+                    </div>
+                    <img class="actual-photo" src="assets/images/m4.jpeg" alt="Memory 4">
+                </div>
+
+                <div class="memory-item" onclick="revealMemory(this)">
+                    <div class="memory-overlay">
+                        <img src="https://img.icons8.com/emoji/96/gift-wrapped.png" alt="Gift icon">
+                    </div>
+                    <img class="actual-photo" src="assets/images/m5.jpeg" alt="Memory 5">
+                </div>
+
+                <div class="memory-item" onclick="revealMemory(this)">
+                    <div class="memory-overlay">
+                        <img src="https://img.icons8.com/emoji/96/gift-wrapped.png" alt="Gift icon">
+                    </div>
+                    <img class="actual-photo" src="assets/images/m6.jpeg" alt="Memory 6">
+                </div>
             </div>
         </section>
+
     </main>
 
     <script src="yes_script.js"></script>
